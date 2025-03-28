@@ -9,18 +9,19 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
             background-color: #f4f4f4;
         }
         .header {
             background-color: #004080;
             color: white;
             padding: 20px;
+            text-align: center;
             font-size: 24px;
         }
         .nav {
             background-color: #333;
             padding: 10px;
+            text-align: center;
         }
         .nav a {
             color: white;
@@ -30,102 +31,67 @@
         }
         .content {
             padding: 20px;
+            text-align: center;
+        }
+        .services, .team, .contact {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .footer {
             background-color: #333;
             color: white;
             padding: 10px;
-            position: fixed;
+            text-align: center;
+            position: relative;
             bottom: 0;
             width: 100%;
-        }
-        .image-container img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            margin: 10px 0;
-        }
-        .contact-form {
-            background: white;
-            padding: 20px;
-            max-width: 400px;
-            margin: auto;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background-color: #004080;
-            color: white;
-            padding: 10px;
-            border: none;
-            width: 100%;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #003366;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        Guha Edge Professional Consulting Services
-    </div>
+    <div class="header">Guha Edge Professional Consulting Services</div>
     <div class="nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#team">Our Team</a>
         <a href="#contact">Contact</a>
     </div>
     <div class="content" id="home">
         <h2>Welcome to Guha Edge</h2>
         <p>Your trusted partner in IT and Technology recruitment.</p>
-        <p>We specialize in connecting top talent with leading companies.</p>
-        <div class="image-container">
-            <img src="https://via.placeholder.com/600x300" alt="Welcome Image">
-        </div>
     </div>
     <div class="content" id="about">
         <h2>About Us</h2>
         <p>Guha Edge is a leading consulting firm dedicated to providing top-tier IT recruitment and consulting services.</p>
-        <div class="image-container">
-            <img src="https://via.placeholder.com/600x300" alt="About Us Image">
-        </div>
     </div>
-    <div class="content" id="services">
+    <div class="services" id="services">
         <h2>Our Services</h2>
         <ul>
             <li>IT and Technology Recruitment</li>
             <li>Cloud Consulting</li>
             <li>Business Analysis and Project Management</li>
         </ul>
-        <div class="image-container">
-            <img src="https://via.placeholder.com/600x300" alt="Services Image">
-        </div>
     </div>
-    <div class="content" id="contact">
+    <div class="team" id="team">
+        <h2>Our Team</h2>
+        <p>Meet the experts behind Guha Edge.</p>
+    </div>
+    <div class="contact" id="contact">
         <h2>Contact Us</h2>
-        <p>Email: contact@guhaedge.com</p>
-        <p>Phone: +91 9876543210</p>
-        <div class="contact-form">
-            <h3>Send Us a Message</h3>
-            <form>
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
     </div>
-    <div class="footer">
-        &copy; 2025 Guha Edge Professional Consulting Services. All rights reserved.
-    </div>
+    <div class="footer">&copy; 2025 Guha Edge Professional Consulting Services. All rights reserved.</div>
 </body>
 </html>
