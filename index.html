@@ -3,147 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guha Edge Professional Consulting Services</title>
+    <title>GuhaEPCS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background: url('https://source.unsplash.com/1600x900/?business,office') no-repeat center center fixed;
-            background-size: cover;
-            text-align: center;
-            color: #333;
-        }
-        .header {
-            background-color: rgba(0, 40, 85, 0.9);
-            color: white;
-            padding: 20px;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .tagline {
-            font-size: 22px;
-            color: #004080;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-        .nav {
-            background-color: rgba(0, 51, 102, 0.9);
-            padding: 15px;
-        }
-        .nav a {
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .content {
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.9);
-            margin: 20px auto;
-            width: 85%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .job-list {
-            text-align: left;
-            margin-top: 20px;
-        }
-        .job-item {
-            background: #eef3fc;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-        .contact form {
+            font-family: 'Roboto', sans-serif;
+            background: #f5f7fa;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            color: #333;
         }
-        .contact input, .contact textarea {
-            width: 80%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
+        header {
+            margin-bottom: 2rem;
         }
-        .contact button {
-            background-color: #002855;
+        h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+        a.button {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
             color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
         }
-        .footer {
-            background-color: rgba(0, 40, 85, 0.9);
-            color: white;
-            padding: 15px;
-            margin-top: 20px;
-            font-size: 16px;
+        a.button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #777;
         }
     </style>
 </head>
 <body>
-    <div class="header">Guha Edge Professional Consulting Services</div>
-    <p class="tagline">Connecting Talent with Opportunity.</p>
-    <div class="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#jobs">Jobs</a>
-        <a href="#contact">Contact</a>
-    </div>
-    <div class="content" id="home">
-        <h2>Empowering Businesses | Transforming Talent | Driving Success</h2>
-        <p>We specialize in recruitment services, helping businesses find top talent globally.</p>
-    </div>
-    <div class="content" id="about">
-        <h2>About Us</h2>
-        <p>Our name, Guha Edge, represents wisdom, strategy, and strength. Inspired by Lord Murugan (Guha), we bring precision and expertise to talent acquisition.</p>
-        <p><strong>Reach:</strong> Operating across India and globally.</p>
-    </div>
-    <div class="content" id="services">
-        <h2>Our Services</h2>
-        <p>IT Recruitment | Finance, Healthcare, and FMCG Recruitment | Executive Search & Leadership Hiring | Contract & Permanent Staffing | Global Recruitment Services</p>
-    </div>
-    <div class="content" id="jobs">
-        <h2>Job Openings</h2>
-        <p>Explore our latest job opportunities and find the perfect fit for your career.</p>
-        <div class="job-list">
-            <div class="job-item">
-                <h3>Software Engineer</h3>
-                <p><strong>Location:</strong> Bangalore</p>
-                <p><strong>Experience:</strong> 3+ years</p>
-                <button>Apply Now</button>
-            </div>
-            <div class="job-item">
-                <h3>Data Analyst</h3>
-                <p><strong>Location:</strong> Mumbai</p>
-                <p><strong>Experience:</strong> 2+ years</p>
-                <button>Apply Now</button>
-            </div>
-            <div class="job-item">
-                <h3>Project Manager</h3>
-                <p><strong>Location:</strong> Chennai</p>
-                <p><strong>Experience:</strong> 5+ years</p>
-                <button>Apply Now</button>
-            </div>
-        </div>
-    </div>
-    <div class="content contact" id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: hr@guhaepcs.infy.uk</p>
-        <form>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    <div class="footer">Let's Connect! Follow us for updates on industry trends and job opportunities.</div>
+    <header>
+        <h1>Welcome to GuhaEPCS</h1>
+        <p>Your online hub for projects, updates, and resources.</p>
+        <a href="#" class="button">Explore Now</a>
+    </header>
+
+    <footer>
+        &copy; 2025 GuhaEPCS. All rights reserved.
+    </footer>
 </body>
 </html>
