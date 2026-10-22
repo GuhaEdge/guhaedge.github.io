@@ -1,64 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuhaEPCS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background: #f5f7fa;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            color: #333;
-        }
-        header {
-            margin-bottom: 2rem;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin: 0.5rem 0;
-        }
-        p {
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
-        }
-        a.button {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-            color: white;
-            background-color: #007bff;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.3s;
-        }
-        a.button:hover {
-            background-color: #0056b3;
-        }
-        footer {
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            color: #777;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guha Edge Professional Consulting Services | Global Talent Acquisition</title>
+<meta name="description" content="Guha Edge Professional Consulting Services: global talent acquisition, IT and ERP hiring, healthcare recruitment and recruitment process consulting.">
+<style>
+:root{--bg:#fbfaf7;--surface:#fff;--text:#14213d;--muted:#5b6478;--accent:#b8860b;--accent-2:#14213d;--on-accent:#fff;--line:#e4e1d8;--band:#14213d;--band-text:#f4f1e8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1424;--surface:#161e33;--text:#eceae2;--muted:#a3abc0;--accent:#e0b04a;--accent-2:#e0b04a;--on-accent:#0e1424;--line:#262f48;--band:#161e33;--band-text:#eceae2;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1424;--surface:#161e33;--text:#eceae2;--muted:#a3abc0;--accent:#e0b04a;--accent-2:#e0b04a;--on-accent:#0e1424;--line:#262f48;--band:#161e33;--band-text:#eceae2;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Georgia,"Times New Roman",serif}
+h1,h2,h3,.sans,nav,button,input,select,textarea{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+h1,h2,h3{line-height:1.2;margin:0 0 .5em;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.brand{font:700 1.05rem -apple-system,"Segoe UI",Arial,sans-serif;text-decoration:none;display:flex;align-items:center;gap:8px}
+.mark{width:30px;height:30px;border-radius:7px;background:var(--accent-2);color:var(--bg);display:grid;place-items:center;font-size:.9rem}
+nav{display:flex;gap:16px;flex-wrap:wrap;font-size:.9rem}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);padding:12px 22px;border-radius:8px;font:600 .95rem -apple-system,"Segoe UI",Arial,sans-serif;text-decoration:none;border:0;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.hero{padding:72px 0 56px}
+.eyebrow{font:600 .78rem -apple-system,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.hero h1{font-size:clamp(2rem,5.5vw,3.4rem);max-width:17ch}
+.hero p{max-width:58ch;color:var(--muted);font-size:1.1rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:48px}
+.stats div{background:var(--surface);padding:20px}
+.stats b{display:block;font:700 1.9rem -apple-system,Arial,sans-serif;color:var(--accent)}
+.stats span{color:var(--muted);font-size:.9rem}
+section{padding:60px 0}
+section>.wrap>h2{font-size:clamp(1.5rem,3.5vw,2.1rem)}
+.lead{color:var(--muted);max-width:62ch;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card h3{font-size:1.1rem}.card p{margin:0;color:var(--muted);font-size:.96rem}
+.ico{font-size:1.5rem;margin-bottom:10px}
+.band{background:var(--band);color:var(--band-text)}
+.band .lead,.band .card p{color:inherit;opacity:.85}
+.band .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.steps li:before{content:"0" counter(s);font:700 1.3rem -apple-system,Arial,sans-serif;color:var(--accent);display:block;margin-bottom:6px}
+.steps b{font-family:-apple-system,"Segoe UI",Arial,sans-serif;display:block;margin-bottom:4px}
+.steps span{color:var(--muted);font-size:.92rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tags span{border:1px solid var(--line);background:var(--surface);padding:6px 14px;border-radius:99px;font:.85rem -apple-system,Arial,sans-serif}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px;align-items:start}
+form{display:grid;gap:12px}
+label{font:600 .85rem -apple-system,Arial,sans-serif}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);font-size:1rem}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+#note{font:.88rem -apple-system,Arial,sans-serif;color:var(--muted);min-height:1.2em}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font:.88rem -apple-system,Arial,sans-serif}
+footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to GuhaEPCS</h1>
-        <p>Your online hub for projects, updates, and resources.</p>
-        <a href="#" class="button">Explore Now</a>
-    </header>
+<header><div class="wrap">
+<a class="brand" href="#top"><span class="mark">G</span>Guha Edge</a>
+<nav><a href="#services">Services</a><a href="#industries">Industries</a><a href="#process">Process</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</div></header>
 
-    <footer>
-        &copy; 2025 GuhaEPCS. All rights reserved.
-    </footer>
+<main id="top">
+<div class="hero"><div class="wrap">
+<div class="eyebrow">Professional Consulting Services</div>
+<h1>Hiring the right people, anywhere in the world.</h1>
+<p>Guha Edge is an independent talent acquisition consultancy. We help growing companies and staffing partners find, screen and close hard-to-fill roles across the USA, Europe, APAC and the Middle East.</p>
+<div class="cta"><a class="btn" href="#contact">Discuss a hiring need</a><a class="btn ghost" href="#services">Explore services</a></div>
+<div class="stats">
+<div><b>9+</b><span>Years in global talent acquisition</span></div>
+<div><b>4</b><span>Regions: USA, Europe, APAC, Middle East</span></div>
+<div><b>3</b><span>Core domains: IT/ERP, healthcare, tech</span></div>
+<div><b>100%</b><span>Remote, flexible engagement</span></div>
+</div>
+</div></div>
+
+<section id="services"><div class="wrap">
+<h2>What we do</h2>
+<p class="lead">End-to-end recruitment support, or just the part you need. Engage us for a single requisition or as an extension of your hiring team.</p>
+<div class="grid">
+<div class="card"><div class="ico">🌍</div><h3>Global Talent Acquisition</h3><p>Full-cycle recruitment for permanent and contract roles, with sourcing strategies tuned to each market and time zone.</p></div>
+<div class="card"><div class="ico">🔎</div><h3>Candidate Screening</h3><p>Structured screening against role requirements: technical fit, communication, availability, compensation and visa or relocation readiness.</p></div>
+<div class="card"><div class="ico">💻</div><h3>IT and ERP Staffing</h3><p>Specialised hiring for Oracle, SAP and wider ERP ecosystems, plus software, cloud and data roles.</p></div>
+<div class="card"><div class="ico">🏥</div><h3>Healthcare Recruitment</h3><p>Sourcing and coordination for clinical and healthcare-support positions, with attention to credentials and compliance.</p></div>
+<div class="card"><div class="ico">🧭</div><h3>Recruitment Process Consulting</h3><p>Review and redesign of your hiring workflow: job descriptions, interview stages, scorecards and candidate experience.</p></div>
+<div class="card"><div class="ico">🤝</div><h3>Hiring Coordination</h3><p>Scheduling, candidate communication, status reporting and offer follow-up, so hiring managers can focus on decisions.</p></div>
+</div>
+</div></section>
+
+<section class="band" id="industries"><div class="wrap">
+<h2>Industries and markets</h2>
+<p class="lead">Experience built across US IT staffing, healthcare and enterprise technology, with active hiring in markets worldwide.</p>
+<div class="grid">
+<div class="card"><h3>Enterprise Technology</h3><p>Oracle, SAP, ERP implementation and support, cloud and application development talent.</p></div>
+<div class="card"><h3>Healthcare</h3><p>Healthcare organisations and staffing partners needing reliable, compliant recruitment support.</p></div>
+<div class="card"><h3>International Hiring</h3><p>Cross-border roles for employers in Japan and wider APAC, Europe, the USA and the Middle East.</p></div>
+</div>
+<div class="tags"><span>USA</span><span>Europe</span><span>APAC</span><span>Middle East</span><span>Japan</span><span>India</span></div>
+</div></section>
+
+<section id="process"><div class="wrap">
+<h2>How we work</h2>
+<p class="lead">A clear, repeatable process with transparent updates at every stage.</p>
+<ol class="steps">
+<li><b>Discover</b><span>Understand the role, team, budget and timeline.</span></li>
+<li><b>Source</b><span>Targeted search across networks, boards and referrals.</span></li>
+<li><b>Screen</b><span>Structured evaluation and shortlist with notes.</span></li>
+<li><b>Present</b><span>Interview coordination and clear feedback loops.</span></li>
+<li><b>Close</b><span>Offer support, negotiation and joining follow-up.</span></li>
+</ol>
+</div></section>
+
+<section class="band" id="about"><div class="wrap two">
+<div>
+<h2>About Guha Edge</h2>
+<p>Guha Edge Professional Consulting Services is led by a global talent acquisition professional with more than nine years of experience across IT staffing, healthcare recruitment and enterprise technology hiring. We are a registered MSME under the Government of India’s Udyam scheme.</p>
+</div>
+<div class="grid" style="grid-template-columns:1fr">
+<div class="card"><h3>Responsive</h3><p>Prompt communication and daily progress on open roles.</p></div>
+<div class="card"><h3>Precise</h3><p>Shortlists matched to your requirements, not volume for its own sake.</p></div>
+<div class="card"><h3>Discreet</h3><p>Confidential handling of client and candidate information.</p></div>
+<div class="card"><h3>Registered</h3><p>Udyam-registered MSME, operating as a formal, compliant business.</p></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap two">
+<div>
+<h2>Let’s talk about your hiring needs</h2>
+<p class="lead">Tell us about the role or the project. We will respond within one business day.</p>
+<p class="sans" style="font-size:.95rem"><b>Location:</b> Tamil Nadu, India (remote, global)<br><b>Hours:</b> Flexible to your time zone</p>
+</div>
+<form id="f">
+<div><label for="n">Name</label><input id="n" required></div>
+<div><label for="e">Email</label><input id="e" type="email" required></div>
+<div><label for="s">I am interested in</label><select id="s"><option>Global talent acquisition</option><option>IT / ERP staffing</option><option>Healthcare recruitment</option><option>Recruitment process consulting</option><option>Something else</option></select></div>
+<div><label for="m">Message</label><textarea id="m" rows="4" required></textarea></div>
+<button class="btn" type="submit">Send enquiry</button>
+<div id="note"></div>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="y"></span> Guha Edge Professional Consulting Services</span><span>Udyam-registered MSME · Tamil Nadu, India</span></div></footer>
+
+<script>
+var CONTACT_EMAIL="hello@example.com"; // replace with your business email
+document.getElementById("y").textContent=new Date().getFullYear();
+document.getElementById("f").addEventListener("submit",function(ev){
+ev.preventDefault();
+var v=function(i){return document.getElementById(i).value};
+var body="Name: "+v("n")+"\nEmail: "+v("e")+"\nInterest: "+v("s")+"\n\n"+v("m");
+location.href="mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent("Enquiry: "+v("s"))+"&body="+encodeURIComponent(body);
+document.getElementById("note").textContent="Opening your email app to send the enquiry…";
+});
+</script>
 </body>
 </html>
